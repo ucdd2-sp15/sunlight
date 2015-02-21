@@ -1,2 +1,2 @@
 # sunlight
-Front-end for Sunlight Foundation APi
+Front-end for Sunlight Foundation API
