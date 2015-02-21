@@ -9,12 +9,18 @@ var legislators = {
 
         $.get("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipcode, apikey, function(data) {
 
-            $.get("/sunlight/legislators/list.jade", function(template) {
-                var html = jade.render(template, {
-                    data: data
+            console.log('got ' + data)
+            if (data.results){
+
+                $.get("/sunlight/legislators/list.jade", function(template) {
+                    var html = jade.render(template, {
+                        data: data
+                    })
+                    console.log(html)
+                    $("#list").html(html)
                 })
-                $("#list").html(html)
-            })
+
+            }
 
         })
 
