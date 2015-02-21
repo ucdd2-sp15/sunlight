@@ -1,4 +1,4 @@
 ---
 title: Congress
-template: index.jade
+template: layout.jade
 ---

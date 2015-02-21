@@ -1,12 +1,22 @@
-h5 Search by Name
-input#name(type='text', name='name')     
-input(type='submit', value='Serach' onClick='legislators.searchByName($("#name").val())')
-
-h5 Search by Zipcode
+h5 Search
 form
-    input#zipcode(type='text', name='zipcode')     
-    input(type='submit', value='Serach' onClick='legislators.searchByZipcode($("#zipcode").val())')
+    .row
+        .col-md-8
+            .form-group.form-group-default
+                label Name            
+                input#name.form-control(type='text', required='')                
+        .col-md-4                         
+            input.btn.btn-primary(type='submit', value='Search' onClick='legislators.searchByName($("#name").val())')
 
+
+form
+    .row
+        .col-md-8
+            .form-group.form-group-default
+                label Zipcode            
+                input#zipcode.form-control(type='text', required='')                
+        .col-md-4                         
+            input.btn.btn-primary(type='submit', value='Search' onClick='legislators.searchByZipcode($("#zipcode").val())')
 
 h5 Favorite Cities
 ul
