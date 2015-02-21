@@ -1,0 +1,33 @@
+h5 Search
+form
+    .row
+        .col-md-8
+            .form-group.form-group-default
+                label Name            
+                input#name.form-control(type='text', required='')                
+        .col-md-4                         
+            input.btn.btn-primary(type='submit', value='Search' onClick='legislators.searchByName($("#name").val())')
+
+
+form
+    .row
+        .col-md-8
+            .form-group.form-group-default
+                label Zipcode            
+                input#zipcode.form-control(type='text', required='')                
+        .col-md-4                         
+            input.btn.btn-primary(type='submit', value='Search' onClick='legislators.searchByZipcode($("#zipcode").val())')
+
+h5 Favorite Cities
+ul
+    li
+        a(href="#", onClick='legislators.searchByZipcode(80301)') Boulder
+    li
+        a(href="#", onClick='legislators.searchByZipcode(80210)') Denver
+
+h5 Chambers
+ul
+    li
+        a(href="#", onClick='legislators.searchByChamber("senate")') Senate
+    li
+        a(href="#", onClick='legislators.searchByChamber("house")') House

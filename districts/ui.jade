@@ -1,0 +1,12 @@
+h5 Search
+form
+    .row
+        .col-md-8
+            .form-group.form-group-default
+                label Zipcode            
+                input#zipcode.form-control(type='text', required='')                
+        .col-md-4                         
+            input.btn.btn-primary(type='submit', value='Search' onClick='districts.searchByZipcode($("#zipcode").val())')
+
+h5 More Search Features
+
