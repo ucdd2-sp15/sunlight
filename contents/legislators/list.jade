@@ -1,6 +1,14 @@
 h3 Results
 each item in data.results
-    pre= JSON.stringify(item)
+	pre(style='white-space:pre;')
+		| Name: #{item.first_name} #{item.middle_name} #{item.last_name}
+		| Chamber: #{item.chamber}
+		| Gender: #{item.gender}
+		| Email: #{item.oc_email}
+		| State Name: #{item.state_name}
+		| Office: #{item.office}
+		| Party: #{item.party}
 
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+
+//h3 Raw data
+//pre= JSON.stringify(data, null, ' ')

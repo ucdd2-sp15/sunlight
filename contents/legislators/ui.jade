@@ -16,6 +16,15 @@ h5 Search
     .col-md-4                         
         button.btn.btn-primary(onClick='legislators.searchByZipcode($("#zipcode").val())') Search
 
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Chamber            
+            input#chamber.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='legislators.searchByChamber($("#chamber").val())') Search
+
+
 h5 Favorite Cities
 ul
     li
