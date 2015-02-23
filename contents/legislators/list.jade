@@ -1,6 +1,20 @@
-h3 Results
+h2 Results
+br
 each item in data.results
-    pre= JSON.stringify(item)
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+	h3(style="margin:0px")= item.first_name + " " + item.last_name
+	-if (item.party == "D")
+		h4(style="margin:0px")= item.title + " (Democrat) from " + item.state_name
+	-else if (item.party == "R")
+		h4(style="margin:0px")= item.title + " (Republican) from " + item.state_name
+	-else
+		h4(style="margin:0px")= item.title + " (" + item.party + ") from " + item.state_name
+	h4(style="margin:0px") Contact
+	p(style="margin:0px")= "Email: " + item.oc_email
+	p(style="margin:0px")= "Phone number: " + item.phone
+	p= "Fax number: " + item.fax
+	a(href= item.website) Website
+	br
+	a(href= "https://twitter.com/" + item.twitter_id) Twitter account
+	br
+	br
+	br
