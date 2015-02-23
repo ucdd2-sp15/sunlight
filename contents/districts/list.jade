@@ -1,4 +1,4 @@
-- var districts = (data.count == 1 ? "district" : "disctricts")
+- var districts = (data.count == 1 ? "district" : "districts")
 
 h3= "Results " + "(" +  data.count + " " + districts + " found)"
 
@@ -14,5 +14,3 @@ each item in data.results
             = item.state
         .col-md-3
             = item.district
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
