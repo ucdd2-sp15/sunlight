@@ -7,5 +7,22 @@ h5 Search
     .col-md-4                         
         button.btn.btn-primary(onClick='districts.searchByZipcode($("#zipcode").val())') Search
 
-h5 More Search Features
+.row
+    .col-md-4
+        .form-group.form-group-default
+            label Lat
+            input#latitude.form-control(type='text', required='')
+    .col-md-4
+        .form-group.form-group-default
+            label Long
+            input#longitude.form-control(type='text', required='')
+    .col-md-4
+        button.btn.btn-primary(onClick='districts.searchByLatLong($("#latitude").val(), $("#longitude").val())') Search
+
+h5 Favorite Cities
+ul
+    li
+        a(href="#" onClick='districts.searchByZipcode(80301)') Boulder
+    li
+        a(href="#" onClick='districts.searchByZipcode(80210)') Denver
 
