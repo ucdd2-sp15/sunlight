@@ -6,4 +6,8 @@ $( "#districts" ).on( "click", function( event ) {
     districts.load()
 })
 
+$('#documents').on("click", function(event){
+    documents.load()
+})
+
 // TODO: add loaders for more features

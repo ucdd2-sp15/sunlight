@@ -1,0 +1,13 @@
+h3 Results
+each item in data.results
+    pre
+        b= item.title
+        br
+        i= 'Published on: ' + item.published_on
+
+        if item.categories
+            p= 'Categories: ' + item.categories
+        p= 'Document Type: ' + item.document_type
+
+        p 
+            a(href=item.url) View Document
