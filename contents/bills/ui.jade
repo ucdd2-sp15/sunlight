@@ -1,0 +1,24 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Name/Bill Text            
+            input#text.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='bills.searchByText($("#text").val())') Search
+
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Congressional Session            
+            input#congress.form-control(type='text', required='') 
+    .col-md-4                         
+        button.btn.btn-primary(onClick='bills.searchByCongress($("#congress").val())') Search
+
+h5 Chambers
+ul
+    li
+        a(href="#" onClick='bills.searchByChamber("senate")') Senate
+    li
+        a(href="#" onClick='bills.searchByChamber("house")') House
