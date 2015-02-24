@@ -1,6 +1,24 @@
+
+
+
+
 h3 Results
 each item in data.results
-    pre= JSON.stringify(item)
+	div.row
+		div.col-md-8
+			b= item.bill_id
+		div.col-md-8
+			b= item.bill_type
+		div.col-md-8
+			b= item.number
+		div.col-md-8
+			b= item.congress
+		div.col-md-8
+			b= item.chamber
+		div.col-md-8
+			b= item.introduced_on
+		div.col-md-8
+			b= item.last_action_at
 
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')
