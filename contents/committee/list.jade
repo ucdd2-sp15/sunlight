@@ -1,0 +1,13 @@
+h3 Results
+table.table.table-striped
+    thead
+        tr 
+            th Name
+            th Chamber
+            th Subcommittee
+    tbody
+    each item in data.results
+        tr
+            td= item.name
+            td= item.chamber
+            td= item.subcommittee
