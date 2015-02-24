@@ -14,4 +14,7 @@ $( "#bills" ).on( "click", function( event ) {
     bills.load()
 })
 
-// TODO: add loaders for more features
+$( "#committee" ).on( "click", function( event ) {
+    committee.load()
+})
+
