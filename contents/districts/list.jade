@@ -1,6 +1,8 @@
 h3 Results
 each item in data.results
-    pre= JSON.stringify(item)
+	div(style="border:1px solid #C4BCE3; padding-left:10px; border-radius:5px; background:#E3E1EB;")
+		h5= "District Number:  " + item.district
+		h5= "State:  " + item.state
 
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')

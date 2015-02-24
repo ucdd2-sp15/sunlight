@@ -8,6 +8,11 @@ var legislators = {
 
         $.get("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipcode, apikey, function(data) {
 
+            console.log('got ' + data)
+  
+
+
+          if (data.results){
             console.log('got ' + data);
             if (data.results){
 
@@ -21,9 +26,10 @@ var legislators = {
 
             }
 
-        })
+        }
 
-    },
+    })
+},
 
     searchByName: function(name) {
 
