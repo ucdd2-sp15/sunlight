@@ -1,6 +1,7 @@
-h3 Results
+h4 RESULTS
+- var colors = {"CO":"green", "CA": "gold", "FL": "red"}
 each item in data.results
-    pre= JSON.stringify(item)
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+	- var currentColor = colors[item.state] ? colors[item.state] : "black";
+	div.row.item(style="padding-left: 20px; color: white; margin-bottom: 10px; background-color: " + currentColor)
+		h3(style="color: white")= "STATE: " + item.state
+		h4(style="color: white")= "District: " + item.district

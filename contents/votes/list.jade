@@ -1,0 +1,23 @@
+h3 Results
+each item in data.results
+    pre
+        .row
+            .col-md-2
+                h4 Year
+            .col-md-2
+                h4 Type
+            .col-md-2
+                h4 Voted At
+            .col-md-6
+                h4 Question
+
+        .row
+            .col-md-2
+                = JSON.stringify(item.year)
+            .col-md-2
+                =JSON.stringify(item.vote_type)
+            .col-md-2
+                =JSON.stringify(item.voted_at)
+            .col-md-6
+                =JSON.stringify(item.question)
+

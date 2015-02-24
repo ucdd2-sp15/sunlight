@@ -1,0 +1,16 @@
+h3 Results
+    div.row
+        div.col-md-4
+            p Day
+        div.col-md-4
+            p Day
+        div.col-md-4
+            p Day
+ 
+
+each item in data.results
+    pre= JSON.stringify(item)
+    div= item.birthday
+
+h3 Raw data
+pre= JSON.stringify(data, null, ' ')
