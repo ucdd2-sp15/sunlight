@@ -1,6 +1,42 @@
-h3 Results
+h2 Legislators
 each item in data.results
-    pre= JSON.stringify(item)
+    if item.middle_name
+        h3= item.title + ". " + item.first_name + " " + item.middle_name + " " + item.last_name
+    else
+        h3= item.title + ". " + item.first_name + " " + item.last_name
+    .indented
+        if item.website    
+            a(href= item.website)
+                = "Website"
+            br    
+        b= "State: "
+        = item.state_name
+        br    
+        b= "Chamber: "
+        = item.chamber
+        br
+        b= "Party: "
+        = item.party
+        br
+        b= "Term start: "
+        = item.term_start
+        br
+        b= "Term end: "
+        = item.term_end
+        br
+
+        h5 Contact
+        b= "Email: "
+        = item.oc_email
+        br
+        b= "Phone: "
+        = item.phone
+        br
+        b= "Office: "
+        = item.office
+        br
+
+    //pre= JSON.stringify(item)
 
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')
