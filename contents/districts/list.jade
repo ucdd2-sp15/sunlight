@@ -1,15 +1,16 @@
-h2 DISTRICT
+h2 District
 h3 Results
-each item in data.results
-    .row
-    //pre= JSON.stringify(item)
+.indented
+    each item in data.results
+        .row
+        //pre= JSON.stringify(item)
 
-    h5 State
-    b= item.state
+        h5 State
+        b= item.state
 
-    h5 District
-    b= item.district
-    .row
-    | -----------------------
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+        h5 District
+        b= item.district
+        .row
+        //| -----------------------
+//h3 Raw data
+//pre= JSON.stringify(data, null, ' ')
