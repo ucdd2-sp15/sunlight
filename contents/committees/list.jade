@@ -1,6 +1,16 @@
 h3 Results
 each item in data.results
-    pre= JSON.stringify(item)
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+    if item.members
+        each member in item['members']
+            if member.title
+                h4= member.title + ' ' + member.legislator.title + ' ' + member.legislator.first_name + ' ' + member.legislator.last_name
+            else
+                h4= member.legislator.title + ' ' + member.legislator.first_name + ' ' + member.legislator.last_name
+            p= "Party: " + member.legislator.party + '     State: ' + member.legislator.state_name
+            
+            div.row
+            
+    if item.chamber
+        h4= item.name
+        p= item.chamber
+        div.row
