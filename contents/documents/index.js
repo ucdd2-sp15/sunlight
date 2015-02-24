@@ -7,19 +7,12 @@ var documents = {
 
         $.get("https://congress.api.sunlightfoundation.com/documents/search?title=" + title, apikey, function(data) {
 
-            console.log('got ' + data)
-            if (data.results){
-
                 $.get("/sunlight/documents/list.jade", function(template) {
                     var html = jade.render(template, {
                         data: data
                     })
-                    console.log(html)
                     $("#list").html(html)
                 })
-
-            }
-
         })
 
     },
