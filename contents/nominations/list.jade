@@ -1,14 +1,21 @@
-h3 Results
+.page-header
+    h1 Nominations
 each item in data.results
-    .panel.panel-default
-        .panel-heading
-            h1.panel-title= item.organization
+    .page-header
+        h3= item.organization
             small.pull-right= item.nomination_id
-        .panel-body
-            h2 Nominees
-            .list-group
-                each nominee in item.nominees
-                    h4.list-group-item-heading= nominee.name
+
+    .col-md-6
+        h4= "Last action on: " + item.last_action_at
+        ul
+            li= "Location: " + item.last_action.location
+            li= "Description: " + item.last_action.text
+    .col-md-6
+        h4 Nominees
+        .list-group
+            each nominee in item.nominees
+                a(href="#").list-group-item
+                    h5.list-group-item-heading= nominee.name
                     p.list-group-item-text= nominee.position
 
 h3 Raw data
