@@ -1,7 +1,7 @@
 h3 Results
 each item in data.results
     pre= JSON.stringify(item)
-    div= item.birthday
+    pre= item.birthday
 
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')

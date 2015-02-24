@@ -1,0 +1,25 @@
+h3 Results
+    div.row
+        div.col-md-4
+            p Legislative Day
+        div.col-md-4
+            p Update
+        div.col-md-4
+            p Congress
+
+    div.row
+        each item in data.results
+            div.col-md-4
+                p= item.legislative_day
+            div.col-md-4
+                p= item.update
+            div.col-md-4
+                p= item.congress
+
+ 
+
+
+
+
+
+
