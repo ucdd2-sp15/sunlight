@@ -41,25 +41,6 @@ var bills = {
 
     },
 
-
-    searchByChamber: function(chamber) {
-
-        // search legistalors by chamber 
-        // ref: https://sunlightlabs.github.io/congress/legislators.html
-
-        $.get("https://congress.api.sunlightfoundation.com/legislators?chamber=" + chamber, apikey, function(data) {
-
-            $.get("/sunlight/legislators/list.jade", function(template) {
-                var html = jade.render(template, {
-                    data: data
-                })
-                $("#list").html(html)
-            })
-
-        })
-
-    },    
-
     load: function() {
 
         $.get("/sunlight/bills/ui.jade", function(template) {
@@ -68,7 +49,7 @@ var bills = {
         })
 
         // default search results
-        legislators.searchByChamber('senate')
+        bills.searchByBillID('hr3590-111')
 
     }
 
