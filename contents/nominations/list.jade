@@ -1,0 +1,15 @@
+h3 Results
+each item in data.results
+    .panel.panel-default
+        .panel-heading
+            h1.panel-title= item.organization
+            small.pull-right= item.nomination_id
+        .panel-body
+            h2 Nominees
+            .list-group
+                each nominee in item.nominees
+                    h4.list-group-item-heading= nominee.name
+                    p.list-group-item-text= nominee.position
+
+h3 Raw data
+pre= JSON.stringify(data, null, ' ')

@@ -4,7 +4,6 @@ var legislators = {
 
         // search legistalors by zipcode (default to Boulder, 80301)
         // ref: https://sunlightlabs.github.io/congress/legislators.html
-        console.log(zipcode);
         var zipcode = zipcode || '80301';
 
         $.get("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipcode, apikey, function(data) {

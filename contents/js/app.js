@@ -7,3 +7,7 @@ $( "#districts" ).on( "click", function( event ) {
 });
 
 // TODO: add loaders for more features
+
+$('#nominations').on('click', function (event) {
+    nominations.load()
+});
