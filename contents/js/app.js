@@ -15,3 +15,6 @@ $( "#votes" ).on( "click", function( event ) {
 })
 
 
+$('#bills').on('click', function(event) {
+	bills.load()
+})
