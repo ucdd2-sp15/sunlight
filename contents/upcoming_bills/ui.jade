@@ -1,0 +1,31 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Legislative Date            
+            input#date.form-control(type='text', placeholder='yyyy-mm-dd', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='upcoming_bills.searchByDate($("#date").val())') Search
+
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Congress            
+            input#congress.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='upcoming_bills.searchByCongress($("#congress").val())') Search
+
+h5 Chambers
+ul
+    li
+        a(href="#" onClick='upcoming_bills.searchByChamber("senate")') Senate
+    li
+        a(href="#" onClick='upcoming_bills.searchByChamber("house")') House
+
+h5 Range
+ul
+    li
+        a(href="#" onClick='upcoming_bills.searchByRange("day")') Day
+    li
+        a(href="#" onClick='upcoming_bills.searchByRange("week")') Week
