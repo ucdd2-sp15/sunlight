@@ -7,3 +7,7 @@ $( "#districts" ).on( "click", function( event ) {
 })
 
 // TODO: add loaders for more features
+
+$('#bills').on('click', function(event) {
+	bills.load()
+})
