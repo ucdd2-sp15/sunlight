@@ -1,0 +1,20 @@
+h3 Results
+div.u-full-width
+    table.table.table-striped
+        thead
+            tr
+                th Nomination ID
+                th Congress
+                th Number
+                th Nominees
+                th Organization
+            tbody
+            each item in data.results
+                tr
+                    td= item.nomination_id
+                    td= item.congress
+                    td= item.number
+                    td
+                        for nominee in item.nominees
+                            = nominee.name + ", "
+                    td= item.organization
