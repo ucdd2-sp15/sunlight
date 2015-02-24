@@ -8,6 +8,8 @@ $( "#districts" ).on( "click", function( event ) {
 
 $( "#committees" ).on( "click", function( event ) {
     committees.load()
+$( "#votes" ).on( "click", function( event ) {
+    votes.load()
 })
 
 // TODO: add loaders for more features
