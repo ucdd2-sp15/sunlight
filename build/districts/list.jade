@@ -1,6 +1,15 @@
+h2 DISTRICT
 h3 Results
 each item in data.results
-    pre= JSON.stringify(item)
+    .row
+    //pre= JSON.stringify(item)
 
+    h5 State
+    b= item.state
+
+    h5 District
+    b= item.district
+    .row
+    | -----------------------
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')
