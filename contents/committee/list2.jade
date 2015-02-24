@@ -1,0 +1,17 @@
+h3 Results
+each item in data.results
+    br
+    table.table.table-striped
+        thead
+            tr 
+                th Name
+                th Title
+                th Rank
+                th Side
+        tbody
+        each member in item.members
+            tr
+                td= member.legislator.first_name+' '+member.legislator.last_name
+                td= member.title
+                td= member.rank
+                td= member.side

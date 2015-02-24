@@ -6,4 +6,8 @@ $( "#districts" ).on( "click", function( event ) {
     districts.load()
 })
 
+$( "#committee" ).on( "click", function( event ) {
+    districts.load()
+})
+
 // TODO: add loaders for more features

@@ -1,0 +1,18 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Legislator            
+            input#legislators.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='committee.searchByLegislators($("#legislators").val())') Search
+
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Committee Name            
+            input#name.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='committee.searchByName($("#name").val())') Search
+
