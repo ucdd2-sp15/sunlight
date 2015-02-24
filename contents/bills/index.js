@@ -7,7 +7,7 @@ var bills = {
 
         var last_action_at = last_action_at || "2010-03-23"
 
-        $.get("https://congress.api.sunlightfoundation.com/bills?history.active=true&order=" + last_action_at, apikey, function(data) {
+        $.get("https://congress.api.sunlightfoundation.com/bills?last_action_at=" + last_action_at, apikey, function(data) {
 
             console.log('got ' + data)
             if (data.results){
@@ -26,14 +26,11 @@ var bills = {
 
     },
 
-    searchByName: function(name) {
+    searchByBillID: function(bill_id) {
 
-        // search legistalors by name
-        // ref: https://sunlightlabs.github.io/congress/legislators.html
+        $.get("https://congress.api.sunlightfoundation.com/bills?bill_id=" + bill_id, apikey, function(data) {
 
-        $.get("https://congress.api.sunlightfoundation.com/legislators?query=" + name, apikey, function(data) {
-
-            $.get("/sunlight/legislators/list.jade", function(template) {
+            $.get("/sunlight/bills/list.jade", function(template) {
                 var html = jade.render(template, {
                     data: data
                 })

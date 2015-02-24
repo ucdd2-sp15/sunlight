@@ -11,21 +11,21 @@ h5 Search
 .row
     .col-md-8
         .form-group.form-group-default
-            label Zipcode            
-            input#zipcode.form-control(type='text', required='')                
+            label bill_id            
+            input#bill-id.form-control(type='text', required='')                
     .col-md-4                         
-        button.btn.btn-primary(onClick='legislators.searchByZipcode($("#zipcode").val())') Search
+        button.btn.btn-primary(onClick='bills.searchByBillID($("#bill-id").val())') Search
 
-h5 Favorite Cities
+h5 Bills ID
 ul
     li
-        a(href="#" onClick='legislators.searchByZipcode(80301)') Boulder
+        a(href="#" onClick='bills.searchByBillID("hr3590-111")') hr3590-111
     li
-        a(href="#" onClick='legislators.searchByZipcode(80210)') Denver
+        a(href="#" onClick='bills.searchByBillID("s179-112")') s179-112"
 
-h5 Chambers
+h5 Bills Last Action At
 ul
     li
-        a(href="#" onClick='legislators.searchByChamber("senate")') Senate
+        a(href="#" onClick='bills.searchByRecentActivity("2011-03-03")') 2011-03-03
     li
-        a(href="#" onClick='legislators.searchByChamber("house")') House
+        a(href="#" onClick='bills.searchByRecentActivity("2011-05-11")') 2011-05-11
