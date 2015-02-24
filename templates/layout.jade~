@@ -7,7 +7,6 @@ html(lang='en')
     meta(name='viewport', content='width=device-width')     
     link(href="style/boostrapv3/css/bootstrap.min.css", rel="stylesheet", type="text/css")
     link(href="style/pages/css/pages.css", rel="stylesheet", type="text/css")
-    link(href="style/custom.css", rel="stylesheet", type="text/css")
 
   body
 
@@ -28,10 +27,7 @@ html(lang='en')
 
     // our app
     script(src="legislators/index.js")
-    script(src="districts/index.js")
-    script(src="upcoming_bills/index.js")        
-    script(src="votes/index.js")        
-    script(src="floor_updates/index.js")        
+    script(src="districts/index.js")        
     
     // main app
     script(src="js/app.js")

@@ -1,0 +1,7 @@
+h3 Results
+each item in data.results
+    pre= JSON.stringify(item)
+    pre= item.birthday
+
+h3 Raw data
+pre= JSON.stringify(data, null, ' ')
