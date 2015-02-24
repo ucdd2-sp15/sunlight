@@ -1,0 +1,15 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Number            
+            input#number.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='votes.searchByNumber($("#number").val())') Search
+
+h5 Chambers
+ul
+    li
+        a(href="#" onClick='votes.searchByChamber("senate")') Senate
+    li
+        a(href="#" onClick='votes.searchByChamber("house")') House
