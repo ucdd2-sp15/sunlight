@@ -7,7 +7,8 @@ var bills = {
 
 
         $.get("https://congress.api.sunlightfoundation.com/bills?congress=" + congress, apikey, function(data) {
-
+                console.log('got' + data)
+                if (data.results){
 
                 $.get("/sunlight/bills/list.jade", function(template) {
                     var html = jade.render(template, {
@@ -17,9 +18,9 @@ var bills = {
                     $("#list").html(html)
                 })
 
-            }
+              }
 
-        })
+            })
 
     },
 

@@ -15,7 +15,6 @@ $('#bills').on("click", function(event){
 })
 
 $('#nominations').on("click", function(event){
-    nominations.load
+    nominations.load()
 })
 
-// TODO: add loaders for more features
