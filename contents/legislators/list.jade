@@ -1,6 +1,21 @@
 h3 Results
-each item in data.results
-    pre= JSON.stringify(item)
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+table.table.table-striped
+	thead
+		tr
+			th Name 
+			th Title
+			th Party
+			th Gender
+			th Website
+			th Email
+	tbody
+	each item in data.results
+		tr
+			td= item.first_name + " " + item.last_name
+			td= item.title
+			td= item.party
+			td= item.gender
+			td
+				a(href=item.website)
+					= item.website
+			td= item.oc_email

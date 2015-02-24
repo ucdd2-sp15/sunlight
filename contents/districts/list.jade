@@ -1,6 +1,12 @@
 h3 Results
+.row
+	.col-md-4
+		|State
+	.col-md-4
+		|District
 each item in data.results
-    pre= JSON.stringify(item)
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+	.row
+		.col-md-4
+			= item.state
+		.col-md-4
+			= item.district

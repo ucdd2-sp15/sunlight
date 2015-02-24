@@ -10,4 +10,8 @@ $("#nominations").on("click", function(event) {
     nominations.load()
 })
 
+$( "#bills" ).on( "click", function( event ) {
+    bills.load()
+})
+
 // TODO: add loaders for more features
