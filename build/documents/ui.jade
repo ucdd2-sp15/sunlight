@@ -1,0 +1,17 @@
+h5 Search
+.row
+    .col-md-12
+        .form-group.form-group-default
+            label Title
+            input#title.form-control(type='text', required='')
+
+.row
+    .col-md-12
+        .form-group.form-group-default
+            label Document Type (gao_report/ig_report)
+            input#type.form-control(type='text', required='')
+.row
+    .col-md-3
+    .col-md-3
+        button.btn.btn-primary(onClick='if($("#title").html()) documents.searchByTitle($("#title").val()); else { documents.searchByType($("#type").val());}') Search
+    .col-md-5

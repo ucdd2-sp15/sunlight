@@ -1,0 +1,7 @@
+h2 Results
+each item in data.results
+        pre
+            h3 #{item.bill_id} : #{item.short_title}
+            h4 #{item.official_title}
+            p= 'Introduced On ' + item.introduced_on
+            p= 'Voted On ' + item.last_vote_at 

@@ -1,0 +1,13 @@
+h3 Results
+each item in data.results
+    pre
+        #{item.nominees.name}
+        br
+        i= 'Number ' + item.number
+        br
+        i= item.organization
+        br
+        i= 'Recieved on: ' + item.received_on
+        p= 'Document Type: ' + item.document_type
+
+       
