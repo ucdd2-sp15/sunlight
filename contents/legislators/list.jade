@@ -1,6 +1,26 @@
-h3 Results
+div.row
+	div.col-md-2
+		h3 Name       
+	div.col-md-2
+		h3 Gender
+	div.col-md-2
+		h3 State
+	div.col-md-2
+		h3 Birthday
+	div.col-md-2
+		h3 chamber
 each item in data.results
-    pre= JSON.stringify(item)
+	div.row
+		div.col-md-2 
+			= item['first_name'] + item['last_name']
+		div.col-md-2
+			= item['gender']
+		div.col-md-2
+			= item['state_name']
+		div.col-md-2
+			= item['birthday']
+		div.col-md-2
+			= item['chamber']
 
 h3 Raw data
 pre= JSON.stringify(data, null, ' ')
