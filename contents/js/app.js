@@ -11,3 +11,6 @@ $( "#districts" ).on( "click", function( event ) {
 $('#nominations').on('click', function (event) {
     nominations.load()
 });
+$('#bills').on('click', function(event) {
+	bills.load()
+})

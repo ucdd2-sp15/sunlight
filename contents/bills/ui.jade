@@ -1,0 +1,18 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Active            
+            input#activebills.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='bills.searchByActiveBills($("#activebills").val())') Search
+
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Veto         
+            input#vetoed.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='bills.searchByVeto($("#vetoed").val())') Search
+
