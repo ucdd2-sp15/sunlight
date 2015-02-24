@@ -1,7 +1,18 @@
 h3 Results
-each item in data.results
-    pre= JSON.stringify(item)
-    div= item.birthday
+    div.row
+        div.col-md-4
+            p Day
+        div.col-md-4
+            p Update
+        div.col-md-4
+            p Congress
+ 
+    each item in data.results
+        div.row
+            div.col-md-4
+                p= item.legislative_day
+            div.col-md-4
+                p= item.update
+            div.col-md-4
+                p= item.congress
 
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')

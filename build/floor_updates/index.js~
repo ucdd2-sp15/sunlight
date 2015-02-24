@@ -1,6 +1,6 @@
-var legislators = {
+var floor_updates = {
 
-    searchByZipcode: function(chamber) {
+    searchByChamber: function(chamber) {
 
         // search legistalors by zipcode (default to Boulder, 80301)
         // ref: https://sunlightlabs.github.io/congress/legislators.html
