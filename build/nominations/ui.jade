@@ -1,0 +1,16 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Committee ID
+            input#committee_id.form-control(type='text', required='')
+    .col-md-4
+        button.btn.btn-primary(onClick='nominations.searchByCommitteeId($("#committee_id").val())') Search
+
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label General Query
+            input#query.form-control(type='text', required='')
+    .col-md-4
+        button.btn.btn-primary(onClick='nominations.searchByQuery($("#query").val())') Search
