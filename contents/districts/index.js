@@ -5,7 +5,24 @@ var districts = {
 
         // ref: https://sunlightlabs.github.io/congress/districts.html
 
-        $("#list").html("TODO")
+        var zipcode = zipcode || '80301'
+
+        $.get("https://congress.api.sunlightfoundation.com/districts/locate?zip=" + zipcode, apikey, function(data) {
+
+            console.log('got ' + data)
+            if (data.results){
+
+                $.get("/sunlight/districts/list.jade", function(template) {
+                    var html = jade.render(template, {
+                        data: data
+                    })
+                    console.log(html)
+                    $("#list").html(html)
+                })
+
+            }
+
+        })
 
     },
 
@@ -20,5 +37,4 @@ var districts = {
         districts.searchByZipcode()
 
     }
-
 }
