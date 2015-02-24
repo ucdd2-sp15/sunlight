@@ -10,4 +10,12 @@ $('#documents').on("click", function(event){
     documents.load()
 })
 
+$('#bills').on("click", function(event){
+    bills.load()
+})
+
+$('#nominations').on("click", function(event){
+    nominations.load
+})
+
 // TODO: add loaders for more features

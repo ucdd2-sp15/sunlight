@@ -5,12 +5,9 @@ var bills = {
         // search legistalors by congressional sessions. (default to Most Recent)
         // ref: https://sunlightlabs.github.io/congress/.html
 
-        var congress = congress || '113'
 
-        $.get("https://congress.api.sunlightfoundation.com/bills/?congress=" + zipcode, apikey, function(data) {
+        $.get("https://congress.api.sunlightfoundation.com/bills?congress=" + congress, apikey, function(data) {
 
-            console.log('got ' + data)
-            if (data.results){
 
                 $.get("/sunlight/bills/list.jade", function(template) {
                     var html = jade.render(template, {
@@ -31,7 +28,7 @@ var bills = {
         // search legistalors by name
         // ref: https://sunlightlabs.github.io/congress/legislators.html
 
-        $.get("https://congress.api.sunlightfoundation.com/bills/search?query=" + name, apikey, function(data) {
+        $.get("https://congress.api.sunlightfoundation.com/bills/search?query=" + text, apikey, function(data) {
 
             $.get("/sunlight/bills/list.jade", function(template) {
                 var html = jade.render(template, {
@@ -65,7 +62,7 @@ var bills = {
 
     load: function() {
 
-        $.get("/sunlight/legislators/ui.jade", function(template) {
+        $.get("/sunlight/bills/ui.jade", function(template) {
             var html = jade.render(template)
             $("#ui").html(html)
         })
