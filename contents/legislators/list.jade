@@ -1,28 +1,21 @@
 h3 Results
-.row
-    .col-md-3
-        |Name 
-    .col-md-2
-        |Title
-    .col-md-2
-        |Party
-    .col-md-2
-        |Currently in office
-    .col-md-2
-        |Website
-
-each item in data.results
-    .row
-            .col-md-3
-                = item.first_name + " " + item.last_name
-            .col-md-2
-                = item.title
-            .col-md-2
-                = item.party
-            .col-md-2
-                = item.in_office ? "yes":"no"
-            .col-md-2
-                = item.website
-
-h3 Raw data
-pre= JSON.stringify(data, null, ' ')
+table.table.table-striped
+	thead
+		tr
+			th Name 
+			th Title
+			th Party
+			th Gender
+			th Website
+			th Email
+	tbody
+	each item in data.results
+		tr
+			td= item.first_name + " " + item.last_name
+			td= item.title
+			td= item.party
+			td= item.gender
+			td
+				a(href=item.website)
+					= item.website
+			td= item.oc_email
