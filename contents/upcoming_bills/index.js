@@ -98,6 +98,8 @@ var upcoming_bills = {
 
     load: function() {
 
+        $("#list").html("")
+
         $.get("/sunlight/upcoming_bills/ui.jade", function(template) {
             var html = jade.render(template)
             $("#ui").html(html)
