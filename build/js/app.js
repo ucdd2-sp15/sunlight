@@ -10,4 +10,10 @@ $( "#committees" ).on( "click", function( event ) {
     committees.load()
 })
 
-// TODO: add loaders for more features
+$( "#votes" ).on( "click", function( event ) {
+    votes.load()
+})
+
+$( "#bills" ).on( "click", function( event ) {
+    bills.load()
+})
