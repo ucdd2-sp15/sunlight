@@ -12,9 +12,9 @@ $('#nominations').on('click', function (event) {
 });
 $( "#votes" ).on( "click", function( event ) {
     votes.load()
-})
+});
 
 
 $('#bills').on('click', function(event) {
 	bills.load()
-})
+});
