@@ -4,27 +4,32 @@ var legislators = {
 
         // search legistalors by zipcode (default to Boulder, 80301)
         // ref: https://sunlightlabs.github.io/congress/legislators.html
-
-        var zipcode = zipcode || '80301'
+        var zipcode = zipcode || '80301';
 
         $.get("https://congress.api.sunlightfoundation.com/legislators/locate?zip=" + zipcode, apikey, function(data) {
 
             console.log('got ' + data)
+  
+
+
+          if (data.results){
+            console.log('got ' + data);
             if (data.results){
 
                 $.get("/sunlight/legislators/list.jade", function(template) {
                     var html = jade.render(template, {
                         data: data
-                    })
-                    console.log(html)
+                    });
+                    console.log(html);
                     $("#list").html(html)
                 })
 
             }
 
-        })
+        }
 
-    },
+    })
+},
 
     searchByName: function(name) {
 
@@ -36,7 +41,7 @@ var legislators = {
             $.get("/sunlight/legislators/list.jade", function(template) {
                 var html = jade.render(template, {
                     data: data
-                })
+                });
                 $("#list").html(html)
             })
 
@@ -55,7 +60,7 @@ var legislators = {
             $.get("/sunlight/legislators/list.jade", function(template) {
                 var html = jade.render(template, {
                     data: data
-                })
+                });
                 $("#list").html(html)
             })
 
@@ -66,13 +71,13 @@ var legislators = {
     load: function() {
 
         $.get("/sunlight/legislators/ui.jade", function(template) {
-            var html = jade.render(template)
+            var html = jade.render(template);
             $("#ui").html(html)
-        })
+        });
 
         // default search results
         legislators.searchByChamber('senate')
 
     }
 
-}
+};
